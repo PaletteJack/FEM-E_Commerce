@@ -1,5 +1,6 @@
 <script>
 import Navbar from "./lib/Navbar.svelte";
+
 import Showcase from "./lib/Showcase.svelte";
 
 let amount = 0;
