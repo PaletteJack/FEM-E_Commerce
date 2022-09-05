@@ -21,7 +21,7 @@ const buttonSubmit = (number) => {
 
 </script>
 
-<main>
+<section id="Description">
     <div class="desc-contain">
         <p id="tagline">SNEAKER COMPANY</p>
         <h1>Fall Limited Edition Sneakers</h1>
@@ -46,11 +46,11 @@ const buttonSubmit = (number) => {
             </button>
         </div>
     </div>
-</main>
+</section>
 
 <style>
 
-    main {
+    section {
         height: 100%;
         font-family: 'Kumbh sans', sans-serif;
     }

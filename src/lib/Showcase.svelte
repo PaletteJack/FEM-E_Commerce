@@ -4,7 +4,7 @@ import Description from "./Description.svelte";
 
 </script>
 
-<main>
+<section id="showcase">
     <div class="container">
         <div class="left">
             <Gallery />
@@ -13,7 +13,7 @@ import Description from "./Description.svelte";
             <Description />
         </div>
     </div>
-</main>
+</section>
 
 <style>
 

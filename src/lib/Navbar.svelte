@@ -28,7 +28,7 @@
 
 </script>
 
-<main>
+<div>
     <div class="overlay {clicked ? 'overlay-active' : ""}" on:click="{handleClick}"></div>
     <nav class="navbar">
         <div class="burger" on:click="{handleClick}">
@@ -48,6 +48,9 @@
         </ul>
         <div class="user-icons">
             <div class="cart-wrap">
+                {#if amount != 0}
+                <div class="notification">{amount}</div>
+                {/if}
                 <img on:click="{cartHandle}" id="cart" src="images/icon-cart.svg" alt="cart-icon">
                 <div class="cart-menu {cartClick ? "visible" : ""}">
                     <div class="menu-head">
@@ -83,7 +86,7 @@
             <img id="profile" src="images/image-avatar.png" alt="profile-pic">
         </div>
     </nav>
-</main>
+</div>
 
 <style>
 
@@ -199,6 +202,24 @@
         position: relative;
     }
 
+    .notification {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: .9rem;
+        font-family: 'Kumbh sans', sans-serif;
+        font-weight: 700;
+        color: white;
+        background-color: hsl(26, 100%, 55%);
+        border-radius: 50%;
+        width: 20px;
+        height: 17px;
+        text-align: center;
+        right: 30px;
+        top: -8px;
+    }
+
     .cart-menu {
         opacity: 0;
         position: absolute;
@@ -265,6 +286,10 @@
         color: grey;
     }
 
+    #cost strong {
+        margin-left: 15px;
+    }
+
     .check-trash img:hover{ cursor: pointer;}
 
     /* --------------------Checkout Button-------------------- */
@@ -327,6 +352,11 @@
             position: absolute;
             top: 25px;
             left:25px;
+        }
+
+        .notification {
+            top: 16px;
+            right: 90px;
         }
 
         .navbar {

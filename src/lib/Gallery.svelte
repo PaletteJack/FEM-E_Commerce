@@ -95,7 +95,7 @@ const handleClick = () => clicked = !clicked;
 
 </script>
 
-<main>
+<section id="gallery">
     {#if clicked}
     <div class="overlay overlay-active" on:click="{handleClick}">
     </div>
@@ -147,7 +147,7 @@ const handleClick = () => clicked = !clicked;
             {/each}
         </div>
     </div>
-</main>
+</section>
 
 <style>
     :global(.overlay-active) {
